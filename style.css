@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', 'Noto Sans Gujarati', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f0f2f5;
+    padding: 20px;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+header {
+    background: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+header p {
+    font-size: 1rem;
+    margin-top: 5px;
+    opacity: 0.9;
+}
+
+.upload-box {
+    padding: 30px;
+    border: 2px dashed #d9dde3;
+    border-radius: 8px;
+    margin: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    transition: background 0.3s ease;
+}
+
+.upload-box:hover {
+    background: #f9f9f9;
+}
+
+.upload-box img {
+    width: 60px;
+    opacity: 0.6;
+}
+
+.upload-box p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.preview-area {
+    margin: 0 25px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.preview-area img {
+    width: 100%;
+    display: block;
+}
+
+.controls {
+    padding: 25px;
+    border-top: 1px solid #eee;
+}
+
+.controls .row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.controls .column {
+    flex: 1;
+}
+
+.controls label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.controls input[type="number"],
+.controls select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.controls input[type="number"]:focus,
+.controls select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.2);
+}
+
+.options {
+    align-items: center;
+}
+
+.options .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+}
+
+.options .checkbox input {
+    width: 16px;
+    height: 16px;
+    accent-color: #007bff;
+}
+
+.quality-row {
+    display: flex;
+    flex-direction: column;
+}
+
+.quality-row input[type="range"] {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.download-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.download-btn:disabled {
+    background: #9ecbff;
+    cursor: not-allowed;
+}
+
+.download-btn:not(:disabled):hover {
+    background: #0056b3;
+}
+
+footer {
+    padding: 15px 25px;
+    background: #f9f9f9;
+    border-top: 1px solid #eee;
+    text-align: center;
+    color: #888;
+    font-size: 0.9rem;
+}
+
+/* SVG Icon for Upload Box (Base64) */
+.upload-box img {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 24 24' fill='none' stroke='%236c757d' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' class='feather feather-upload-cloud'%3E%3Cpath d='M22 17a5 5 0 0 0-3-3.87'/%3E%3Cpath d='M16 16.13a5 5 0 0 0-3-3.87'/%3E%3Cpath d='M11.2 12.87a5 5 0 0 0-3 3.87'/%3E%3Cpath d='M7.8 16.13a5 5 0 0 0-3 3.87'/%3E%3Cpath d='M5 17a5 5 0 0 0-3 3.87'/%3E%3Cpath d='M2 17.13a5 5 0 0 0 3 3.87'/%3E%3Cpath d='M5.2 21.13a5 5 0 0 0 3 3.87'/%3E%3Cpath d='M9.8 24a5 5 0 0 0 3 3.87'/%3E%3Cpath d='M14.2 24a5 5 0 0 0 3-3.87'/%3E%3Cpath d='M18.8 21.13a5 5 0 0 0 3-3.87'/%3E%3Cpath d='M21 17.13a5 5 0 0 0 3-3.87'/%3E%3Cpolyline points='16 16 12 12 8 16'/%3E%3Cline x1='12' y1='12' x2='12' y2='21'/%3E%3Cpath d='M20.39 18.39A5 5 0 0 0 18 9h-1.26A8 8 0 1 0 3 16.3'/%3E%3C/svg%3E");
+}
+
+
+/* --- નવો સુધારો અહીં છે (Preset Buttons Styles) --- */
+.preset-row {
+    margin-bottom: 20px;
+}
+
+.preset-row label {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.preset-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.preset-btn {
+    flex: 1 1 auto;
+    padding: 8px 12px;
+    border: 1px solid #007bff;
+    background: #fff;
+    color: #007bff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.preset-btn:hover {
+    background: #007bff;
+    color: #fff;
+}
