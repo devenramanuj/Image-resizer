@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ઈમેજ રિસાઈઝર | Image Resizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <header>
+            <h1>ઈમેજ રિસાઈઝર (Image Resizer)</h1>
+            <p>તમારી છબીઓને ઝડપથી અને સરળતાથી માપ બદલો.</p>
+        </header>
+
+        <div class="upload-box">
+            <input type="file" id="upload" accept="image/*" hidden>
+            <img src="upload-icon.svg" alt="Upload Icon">
+            <p>તમારી છબી અહીં બ્રાઉઝ કરો અથવા ખેંચીને મૂકો</p>
+        </div>
+
+        <div class="preview-area" hidden>
+            <img id="previewImage" alt="Image Preview">
+        </div>
+
+        <div class="controls">
+            <div class="row">
+                <div class="column">
+                    <label for="width">પહોળાઈ (Width)</label>
+                    <input type="number" id="width" placeholder="Auto">
+                </div>
+                <div class="column">
+                    <label for="height">ઊંચાઈ (Height)</label>
+                    <input type="number" id="height" placeholder="Auto">
+                </div>
+            </div>
+
+            <div class="row options">
+                <label class="checkbox">
+                    <input type="checkbox" id="aspectRatio" checked>
+                    એસ્પેક્ટ રેશિયો જાળવો (Lock aspect ratio)
+                </label>
+                <div class="column format">
+                    <label for="format">ફોર્મેટ (Format)</label>
+                    <select id="format">
+                        <option value="image/jpeg">JPEG</option>
+                        <option value="image/png">PNG</option>
+                        <option value="image/webp">WebP</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row quality-row">
+                <label for="quality">ગુણવત્તા (Quality): <span id="qualityValue">0.9</span></label>
+                <input type="range" id="quality" min="0.1" max="1.0" step="0.1" value="0.9">
+            </div>
+
+            <div class="preset-row">
+                <label>પ્રીસેટ સાઇઝ (Preset Sizes)</label>
+                <div class="preset-buttons">
+                    <button class="preset-btn" data-width="1080" data-height="1080">1:1 (Square)</button>
+                    <button class="preset-btn" data-width="1080" data-height="1350">4:5 (Portrait)</button>
+                    <button class="preset-btn" data-width="1920" data-height="1080">16:9 (HD)</button>
+                    <button class="preset-btn" data-width="1200" data-height="630">FB Link</button>
+                </div>
+            </div>
+            <button class="download-btn" id="download" disabled>
+                રિસાઇઝ અને ડાઉનલોડ કરો (Resize & Download)
+            </button>
+        </div>
+
+        <footer>
+            <p>Developed by Devendra Ramanuj, 9276505035</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
